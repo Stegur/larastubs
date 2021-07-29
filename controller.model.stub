@@ -1,0 +1,107 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use App\Http\Requests\{{ model }}CreateRequest;
+use App\Http\Requests\{{ model }}UpdateRequest;
+use App\Http\Controllers\Controller;
+
+class {{ class }} extends Controller
+{
+    /**
+     * Создание контроллера
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Отображение списка {{ model }}
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index(): \Illuminate\View\View
+    {
+        //
+    }
+
+    /**
+     * Отображение формы создания {{ model }}
+     *
+     * @return \Illuminate\View\View
+     */
+    public function create(): \Illuminate\View\View
+    {
+        //
+    }
+
+    /**
+     * Сохранение созданной {{ model }} в БД
+     *
+     * @param  \App\Http\Requests\{{ model }}CreateRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store({{ model }}CreateRequest $request): \Illuminate\Http\RedirectResponse
+    {
+        $data = $request->validated();
+
+        {{ model }}::create($data);
+
+        //
+    }
+
+    /**
+     * Отображение {{ model }}
+     *
+     * @param  \App\Models\{{ model }}  ${{ modelVariable }}
+     * @return \Illuminate\View\View
+     */
+    public function show({{ model }} ${{ modelVariable }}): \Illuminate\View\View
+    {
+        //
+    }
+
+    /**
+     * Отображение формы редактирования {{ model }}
+     *
+     * @param  \App\Models\{{ model }}  ${{ modelVariable }}
+     * @return \Illuminate\View\View
+     */
+    public function edit({{ model }} ${{ modelVariable }}): \Illuminate\View\View
+    {
+        //
+    }
+
+    /**
+     * Обновляет данные о {{ model }} и переходит на детальную страницу
+     *
+     * @param  \App\Http\Requests\{{ model }}UpdateRequest  $request
+     * @param  \App\Models\{{ model }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update({{ model }}UpdateRequest $request, {{ model }} ${{ modelVariable }}): \Illuminate\Http\RedirectResponse
+    {
+        $data = $request->validated();
+
+        ${{ modelVariable }}->update($data);
+
+        //
+    }
+
+    /**
+     * Удаление {{ model }} из БД
+     *
+     * @param  \App\Models\{{ model }}  ${{ modelVariable }}
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy({{ model }} ${{ modelVariable }}): \Illuminate\Http\RedirectResponse
+    {
+        ${{ modelVariable }}->delete();
+
+        //
+    }
+}

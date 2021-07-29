@@ -1,0 +1,30 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Foundation\Bus\Dispatchable;
+
+class {{ class }}
+{
+    use Dispatchable;
+
+    /**
+     * Создание экземпляра.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Обработчик.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        //
+    }
+}

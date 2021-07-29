@@ -1,0 +1,56 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class {{ class }} extends Model
+{
+    use HasFactory;
+
+    // ВНИМАНИЕ! Установлен Observer! // Удалить если не используется
+
+    /**
+     * Константы
+     */
+
+    /**
+     *
+     * Наименование таблицы
+     *
+     * @var string
+     */
+    protected $table = '{{ table }}';
+
+    /**
+     * Аттрибуты для заполнения
+     *
+     * name|required|string|max:255 - Название
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+    ];
+
+    /**
+     *
+     * Атрибуты, которые будут приведены к нативным типам
+     *
+     * @var array
+     */
+    protected $casts = [];
+
+    /**
+     * Переопределение атрибутов
+     */
+
+    /**
+     * Релейшены
+     */
+
+    /**
+     * Скоупы
+     */
+}

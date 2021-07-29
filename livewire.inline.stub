@@ -1,0 +1,21 @@
+<?php
+
+namespace [namespace];
+
+use Livewire\Component;
+
+class [class] extends Component
+{
+    /**
+     * Отрисовка компонента
+     *
+     */
+    public function render()
+    {
+        return <<<'blade'
+            <div>
+                {{-- [quote] --}}
+            </div>
+        blade;
+    }
+}

@@ -1,0 +1,63 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+
+class {{ class }}
+{
+    /**
+     * Обработчик события "created" для {{ model }}.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return void
+     */
+    public function created({{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Обработчик события "updated" для {{ model }}.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return void
+     */
+    public function updated({{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Обработчик события "deleted" для {{ model }}.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return void
+     */
+    public function deleted({{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Обработчик события "restored" для {{ model }}.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return void
+     */
+    public function restored({{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Обработчик события "force deleted" для {{ model }}.
+     *
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return void
+     */
+    public function forceDeleted({{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+}

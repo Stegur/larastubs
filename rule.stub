@@ -1,0 +1,40 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Contracts\Validation\Rule;
+
+class {{ class }} implements Rule
+{
+    /**
+     * Создание.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Проходит ли правило проверки.
+     *
+     * @param  string  $attribute
+     * @param  mixed  $value
+     * @return bool
+     */
+    public function passes($attribute, $value)
+    {
+        //
+    }
+
+    /**
+     * Сообщение об ошибке проверки.
+     *
+     * @return string
+     */
+    public function message()
+    {
+        return 'The validation error message.';
+    }
+}

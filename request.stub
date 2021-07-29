@@ -1,0 +1,66 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+
+class {{ class }} extends FormRequest
+{
+    /**
+     * Уполномочен ли пользователь делать этот запрос.
+     *
+     * @return bool
+     */
+    public function authorize(): bool
+    {
+        return auth()->check();
+    }
+
+    /**
+     * Подготавливает данные перед валидацией
+     *
+     * @return void
+     *
+     */
+    public function prepareForValidation(): void
+    {
+        //
+    }
+
+    /**
+     * Правила валидации, применимые к запросу.
+     *
+     * @return array
+     */
+    public function rules(): array
+    {
+        return [
+            // 'name' => ['required', 'string', 'max:255', Rule::unique('{{ table }}', '{{ column }}')->ignore($this->{{ model_name }})],
+        ];
+    }
+
+    /**
+     * Перевод полей
+     *
+     * @return array
+     */
+    public function attributes(): array
+    {
+        return [
+            'name' => 'Название',
+        ];
+    }
+
+    /**
+     * Сообщения валидации
+     *
+     * @return array
+     */
+    public function messages(): array
+    {
+        return [
+            'title.unique' => '... с таким названием уже существует',
+        ];
+    }
+}

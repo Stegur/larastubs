@@ -1,0 +1,18 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class {{ class }} extends Seeder
+{
+    /**
+     * Запуск сидов базы данных.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        //
+    }
+}

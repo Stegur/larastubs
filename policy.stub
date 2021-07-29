@@ -1,0 +1,106 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Auth\Access\HandlesAuthorization;
+use {{ namespacedModel }};
+use {{ namespacedUserModel }};
+
+class {{ class }}
+{
+    use HandlesAuthorization;
+
+    /**
+     * Проверка предварительной авторизации
+     *
+     * @param  \App\Models\Staff\User  $user
+     * @param  string  $ability
+     * @return bool
+     */
+    public function before(User $user, $ability)
+    {
+        return $user->isAdmin();
+    }
+
+    /**
+     * Может ли пользователь просматривать какие-либо модели.
+     *
+     * @param  \{{ namespacedUserModel }}  $user
+     * @return mixed
+     */
+    public function viewAny({{ user }} $user)
+    {
+        //
+    }
+
+    /**
+     * Может ли пользователь просматривать модель.
+     *
+     * @param  \{{ namespacedUserModel }}  $user
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return mixed
+     */
+    public function view({{ user }} $user, {{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Может ли пользователь создавать модель.
+     *
+     * @param  \{{ namespacedUserModel }}  $user
+     * @return mixed
+     */
+    public function create({{ user }} $user)
+    {
+        //
+    }
+
+    /**
+     * Может ли пользователь изменять модель.
+     *
+     * @param  \{{ namespacedUserModel }}  $user
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return mixed
+     */
+    public function update({{ user }} $user, {{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Может ли пользователь удалять модель.
+     *
+     * @param  \{{ namespacedUserModel }}  $user
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return mixed
+     */
+    public function delete({{ user }} $user, {{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Может ли пользователь восстанавливать модель.
+     *
+     * @param  \{{ namespacedUserModel }}  $user
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return mixed
+     */
+    public function restore({{ user }} $user, {{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Может ли пользователь удалить модель без возможности восстановления.
+     *
+     * @param  \{{ namespacedUserModel }}  $user
+     * @param  \{{ namespacedModel }}  ${{ modelVariable }}
+     * @return mixed
+     */
+    public function forceDelete({{ user }} $user, {{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+}

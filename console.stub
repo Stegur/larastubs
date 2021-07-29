@@ -1,0 +1,42 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Console\Command;
+
+class {{ class }} extends Command
+{
+    /**
+     * Имя и подпись консольной команды.
+     *
+     * @var string
+     */
+    protected $signature = '{{ command }}';
+
+    /**
+     * Описание консольной команды.
+     *
+     * @var string
+     */
+    protected $description = 'Описание консольной команды';
+
+    /**
+     * Создание.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Обработчик.
+     *
+     * @return int
+     */
+    public function handle()
+    {
+        return 0;
+    }
+}
